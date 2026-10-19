@@ -6,12 +6,12 @@
 <meta name="google-site-verification" content="rqzMWlrd6zMWijleghKg8Biqb76ti_pWDDGgYylAINA" />
 <meta name="theme-color" content="#292768">
 <meta property="og:type" content="website">
-<meta property="og:title" content="CCG | C. Consulting Group">
+<meta property="og:title" content="C. Consulting Group | Printing and Binding in Gaculiro">
 <meta property="og:description" content="Printing, binding, photocopying, scanning, lamination, and transport and logistics in Gaculiro. Order on WhatsApp.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="canonical" href="https://cconsultinggroup.netlify.app/">
-<meta property="og:url" content="https://cconsultinggroup.netlify.app/">
-<title>CCG | C. Consulting Group | Printing, Binding, Photocopy and Scanning in Gaculiro</title>
+<link rel="canonical" href="https://cconsultinggroup.vercel.app/">
+<meta property="og:url" content="https://cconsultinggroup.vercel.app/">
+<title>C. Consulting Group | Printing and Binding in Gaculiro</title>
 <meta name="description" content="CCG (C. Consulting Group) is a one-stop shop in Gaculiro for printing, binding, photocopying, lamination, scanning, and transport and logistics. Order on WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,6 +58,13 @@ h1,h2,h3{text-wrap:balance;margin:0}
 .btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
 .btn.ghost:hover{box-shadow:inset 0 0 0 2px var(--ind-text)}
 .bar .btn{padding:11px 18px}
+.menu-btn{display:none;align-items:center;gap:8px;margin-left:auto;flex:none;height:44px;font:inherit;font-weight:700;font-size:15px;color:var(--ink);background:transparent;border:0;border-radius:999px;box-shadow:inset 0 0 0 2px var(--line);padding:0 16px;cursor:pointer;line-height:1}
+.menu-btn svg{width:18px;height:18px;flex:none;display:block}
+.menu-btn .x{display:none}
+.menu-btn span{min-width:3.4em;text-align:left}
+.bar.is-open .menu-btn .bars{display:none}
+.bar.is-open .menu-btn .x{display:block}
+.menu-btn:hover{box-shadow:inset 0 0 0 2px var(--ind-text)}
 
 /* hero */
 .hero{padding-block:48px 56px}
@@ -131,7 +138,7 @@ section{padding-block:56px}
 .cbox{border-radius:22px;padding:28px;min-width:0}
 .cbox.main{background:var(--wa);color:var(--on-wa);display:flex;flex-direction:column;gap:16px;justify-content:center}
 .cbox.main .lbl{font-size:14px;font-weight:700;letter-spacing:.16em}
-.cbox.main .num{font-size:clamp(30px,5vw,46px);font-weight:700;line-height:1.05;white-space:nowrap}
+.cbox.main .num{font-size:clamp(30px,5vw,46px);font-weight:700;line-height:1.15}
 .cbox.main p{margin:0;font-size:17px}
 .cbox.main .btn{background:var(--indigo-d);color:#fff;align-self:flex-start}
 .cbox.info{background:rgba(255,255,255,.09);display:flex;flex-direction:column;gap:6px}
@@ -161,22 +168,29 @@ footer b{color:var(--ink)}
   .photo{order:-1;aspect-ratio:16/10}
   .why .list{grid-template-columns:1fr}
   .why .item:nth-child(2){border-top:1px solid var(--line)}
-  .nav{display:none}
-  .bar .btn{margin-left:auto}
+  .bar .wrap{position:relative;gap:10px}
+  .menu-btn{display:inline-flex}
+  .nav{display:none;position:absolute;z-index:30;left:0;right:0;top:100%;margin:0;flex-direction:column;gap:2px;padding:8px 12px 12px;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+  .bar.is-open .nav{display:flex}
+  .nav a{padding:14px 16px;border-radius:12px;color:var(--ink);font-size:17px}
+  .nav a:hover{background:var(--bg)}
 }
 @media (max-width:560px){
   body{font-size:16px}
-  .grid6{grid-template-columns:repeat(2,1fr);gap:12px}
-  .tile{padding:18px 14px}
+  .grid6{grid-template-columns:1fr;gap:12px}
+  .tile{display:grid;grid-template-columns:58px 1fr;column-gap:14px;align-items:center;padding:16px 16px 14px}
+  .tile .ic{grid-row:1 / span 2}
+  .tile h3{margin-top:0}
+  .tile p{margin-top:4px}
   .gal{gap:12px}
-  .gtile .cap{padding:12px 12px 14px}
-  .gtile .cap h3{font-size:17px}
-  .gtile .cap p{display:none}
+  .gtile .cap{padding:14px 14px 16px}
+  .gtile .cap h3{font-size:18px}
   .hero p.lead{font-size:18px}
   .cta-row .btn{flex:1 1 100%;justify-content:center}
   section{padding-block:40px}
   .logo img{height:38px}
-  .bar .btn{padding:10px 14px;font-size:15px}
+  .bar .btn{position:relative;width:44px;height:44px;padding:0;justify-content:center}
+  .bar .btn .lbl{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   .cbox{padding:22px}
   .row span.v{font-size:17px}
   .row .ico{width:38px;height:38px}
@@ -186,7 +200,7 @@ footer b{color:var(--ink)}
 </style>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"C. Consulting Group","alternateName":"CCG","url":"https://cconsultinggroup.netlify.app/","description":"Printing, binding, photocopying, lamination, scanning, and transport and logistics.","telephone":"+250781772210","email":"cconsultinggroup9@gmail.com","address":{"@type":"PostalAddress","streetAddress":"1st floor, Simba Center Building","addressLocality":"Gaculiro","addressCountry":"RW"}}
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"C. Consulting Group","alternateName":"CCG","url":"https://cconsultinggroup.vercel.app/","description":"Printing, binding, photocopying, lamination, scanning, and transport and logistics.","telephone":"+250781772210","email":"cconsultinggroup9@gmail.com","address":{"@type":"PostalAddress","streetAddress":"1st floor, Simba Center Building","addressLocality":"Gaculiro","addressCountry":"RW"}}
 </script>
 
 
@@ -195,12 +209,17 @@ footer b{color:var(--ink)}
 <header class="bar">
   <div class="wrap">
     <a class="logo" href="#top" aria-label="C. Consulting Group"><img src="assets/logo.png" alt="C. Consulting Group"></a>
-    <nav class="nav" aria-label="Main">
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">
+      <svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Menu</span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Main">
       <a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#why">Why us</a><a href="#contact">Contact</a>
     </nav>
     <a class="btn wa" href="https://wa.me/250781772210?text=Hello%20C.%20Consulting%20Group%2C%20I%20would%20like%20to%20ask%20about%20your%20services." target="_blank" rel="noopener">
       <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 43l3.2-10.4A17 17 0 1 1 17.6 39.8z" fill="currentColor"/><g transform="translate(12.2 11.6) scale(1.05)"><path fill="var(--wa)" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" transform="scale(.9) translate(1.2 1)"/></g></svg>
-      WhatsApp us
+      <span class="lbl">WhatsApp us</span>
     </a>
   </div>
 </header>
@@ -358,6 +377,21 @@ footer b{color:var(--ink)}
 </footer>
 
 <script>
+(function(){
+  var bar=document.querySelector('.bar'),btn=document.querySelector('.menu-btn'),nav=document.getElementById('site-nav');
+  if(!bar||!btn||!nav) return;
+  var label=btn.querySelector('span');
+  function setOpen(open){
+    bar.classList.toggle('is-open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    if(label) label.textContent=open?'Close':'Menu';
+  }
+  btn.addEventListener('click',function(){setOpen(!bar.classList.contains('is-open'))});
+  nav.addEventListener('click',function(e){if(e.target.closest('a')) setOpen(false)});
+  document.addEventListener('click',function(e){if(!bar.contains(e.target)) setOpen(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape') setOpen(false)});
+  window.addEventListener('resize',function(){if(window.matchMedia('(min-width:821px)').matches) setOpen(false)});
+})();
 document.querySelectorAll('.cp').forEach(function(btn){
   btn.addEventListener('click',function(){
     var el=document.getElementById(btn.getAttribute('data-copy')); var text=el.textContent.trim();

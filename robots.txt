@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cconsultinggroup.netlify.app/sitemap.xml
+Sitemap: https://cconsultinggroup.vercel.app/sitemap.xml
