@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cconsultinggroup.netlify.app/sitemap.xml
